@@ -1,0 +1,1 @@
+./gradlew -p junit clean test allureReport
