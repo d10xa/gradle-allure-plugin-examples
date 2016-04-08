@@ -1,2 +1,3 @@
 include 'junit'
 include 'testng'
+include 'spock'

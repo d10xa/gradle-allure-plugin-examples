@@ -1,1 +1,5 @@
-./gradlew -p junit clean test allureReport
+## Run all:
+
+```bash
+./gradlew clean test allureReport
+```
