@@ -1,4 +1,5 @@
 ## Run:
+
 ```bash
-./gradlew clean test allureReport
+gradle clean test allureReport
 ```
