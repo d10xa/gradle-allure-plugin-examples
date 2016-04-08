@@ -1,1 +1,2 @@
 include 'junit'
+include 'testng'
