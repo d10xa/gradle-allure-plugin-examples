@@ -1,3 +1,4 @@
 include 'junit'
 include 'testng'
 include 'spock'
+include 'selenide'
