@@ -3,7 +3,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "ru.d10xa:gradle-allure-plugin:0.5.1"
+        classpath "ru.d10xa:gradle-allure-plugin:0.5.2"
     }
 }
 
@@ -28,7 +28,7 @@ dependencies {
 test {
     systemProperties = [
             'file.encoding': 'UTF-8',
-            'selenide.browser': 'chrome',
+            'selenide.browser': 'firefox',
             'BUILD_URL': buildDir.absolutePath
     ]
     testLogging.showStandardStreams = true
