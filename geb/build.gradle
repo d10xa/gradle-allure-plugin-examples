@@ -14,7 +14,6 @@ apply plugin: 'ru.d10xa.allure'
 apply plugin: 'ru.d10xa.geb'
 
 allure {
-    aspectjweaver = true
     spock = true
     geb = true
 }
