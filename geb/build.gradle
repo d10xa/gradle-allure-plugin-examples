@@ -5,7 +5,7 @@ buildscript {
     }
     dependencies {
         classpath "ru.d10xa:gradle-allure-plugin:0.5.2"
-        classpath "ru.d10xa:gradle-geb-plugin:1.0.5"
+        classpath "ru.d10xa:gradle-geb-plugin:2.0.1"
     }
 }
 
@@ -13,26 +13,24 @@ apply plugin: 'groovy'
 apply plugin: 'ru.d10xa.allure'
 apply plugin: 'ru.d10xa.geb'
 
-allure {
-    spock = true
-    geb = true
-}
-
 repositories {
     jcenter()
 }
 
 dependencies {
+    testCompile 'org.codehaus.groovy:groovy-all:2.4.7'
     testCompile 'ch.qos.logback:logback-classic:1.1.7'
+}
+
+allure {
+    spock = true
+    geb = true
 }
 
 geb {
 
     //https://sites.google.com/a/chromium.org/chromedriver/downloads
-    chromeDriverVersion = '2.22'
-
-    //http://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all
-    groovyVersion = '2.4.7'
+    chromeDriverVersion = '2.24'
 
     //http://mvnrepository.com/artifact/org.gebish/geb-core
     gebVersion = '0.13.1'
@@ -40,8 +38,8 @@ geb {
     //http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-api
     seleniumVersion = '2.53.1'
 
-    defaultTestBrowser = 'firefox'
-    // defaultTestBrowser = 'chrome'
+    gebEnv = 'chrome'
+    // gebEnv = 'firefox'
 }
 
 tasks.withType(Test)*.finalizedBy 'allureReport'
