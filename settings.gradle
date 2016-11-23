@@ -1,4 +1,5 @@
 include 'junit'
+include 'junit-spring'
 include 'testng'
 include 'spock'
 include 'selenide'

@@ -1,0 +1,28 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.4.2.RELEASE"
+        classpath "ru.d10xa:gradle-allure-plugin:0.5.5"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'ru.d10xa.allure'
+apply plugin: 'org.springframework.boot'
+
+allure {
+    aspectjweaver = true
+    junit = true
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-web"
+    testCompile "org.springframework.boot:spring-boot-starter-test"
+    testCompile 'junit:junit'
+}
